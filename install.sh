@@ -88,9 +88,14 @@ config_after_install() {
 	#config_password="admin"
 	#config_port="5321"
 	
-	config_account='admin'
-	config_password='admin'
-	config_port='5321'
+	config_account="admin"
+	config_password="admin"
+	config_port="5321"
+	
+	echo -e "${yellow}您的账户名将设定为:${config_account}${plain}"
+	echo -e "${yellow}您的账户密码将设定为:${config_password}${plain}"
+	echo -e "${yellow}您的面板访问端口将设定为:${config_port}${plain}"
+	
 	/usr/local/x-ui/x-ui setting -username ${config_account} -password ${config_password}
 	/usr/local/x-ui/x-ui setting -port ${config_port}
 	
